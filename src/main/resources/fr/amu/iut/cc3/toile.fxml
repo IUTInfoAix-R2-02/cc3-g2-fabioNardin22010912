@@ -33,6 +33,14 @@
         <Text text="Compétence 5" x="26" y="300" />
         <Text text="Compétence 6" x="26" y="99" />
         <Pane fx:id="toile" styleClass="toile" />
+        <Line fx:id="line1" endX="200" startX="200" endY="200" startY="200" />
+        <Line fx:id="line2" endX="200" startX="200" endY="200" startY="200" />
+        <Line fx:id="line3" endX="200" startX="200" endY="200" startY="200" />
+        <Line fx:id="line4" endX="200" startX="200" endY="200" startY="200" />
+        <Line fx:id="line5" endX="200" startX="200" endY="200" startY="200" />
+        <Line fx:id="line6" endX="200" startX="200" endY="200" startY="200" />
+
+
       <HBox.margin>
          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
       </HBox.margin>

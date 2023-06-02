@@ -62,6 +62,12 @@ public class ToileController implements Initializable {
         y=getYRadarChart(value,axe);
         changePosPoint(x,y,c);
     }
+    void moveLine(Line l,Circle cd,Circle cf){
+        l.setStartX(cd.getCenterX());
+        l.setStartY(cd.getCenterY());
+        l.setEndX(cf.getCenterX());
+        l.setEndY(cf.getCenterY());
+    }
     @FXML
     Circle c1;
     @FXML
@@ -101,7 +107,18 @@ public class ToileController implements Initializable {
     boolean p4 = false;
     boolean p5 = false;
     boolean p6 = false;
-
+    @FXML
+    Line line1 ;
+    @FXML
+    Line line2 ;
+    @FXML
+    Line line3 ;
+    @FXML
+    Line line4 ;
+    @FXML
+    Line line5 ;
+    @FXML
+    Line line6 ;
 
     @FXML
     private void placerPoints(ActionEvent event){
@@ -146,6 +163,12 @@ public class ToileController implements Initializable {
     }
     @FXML
     private void tracer(ActionEvent e){
+        moveLine(line1,c1,c2);
+        moveLine(line2,c2,c3);
+        moveLine(line3,c3,c4);
+        moveLine(line4,c4,c5);
+        moveLine(line5,c5,c6);
+        moveLine(line6,c6,c1);
 
     }
     @FXML
@@ -158,6 +181,12 @@ public class ToileController implements Initializable {
         changePosPoint(originX,originY,c4);
         changePosPoint(originX,originY,c5);
         changePosPoint(originX,originY,c6);
+        moveLine(line1,c1,c2);
+        moveLine(line2,c1,c2);
+        moveLine(line3,c1,c2);
+        moveLine(line4,c1,c2);
+        moveLine(line5,c1,c2);
+        moveLine(line6,c1,c2);
         p1 = false;
         p2 = false;
         p3 = false;
