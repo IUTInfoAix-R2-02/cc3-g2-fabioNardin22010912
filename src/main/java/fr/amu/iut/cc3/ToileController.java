@@ -173,8 +173,6 @@ public class ToileController implements Initializable {
     }
     @FXML
     private void vider(ActionEvent e){
-        // changer la value des coord de tt les points en l'origine cad 200 200
-
         changePosPoint(originX,originY,c1);
         changePosPoint(originX,originY,c2);
         changePosPoint(originX,originY,c3);
