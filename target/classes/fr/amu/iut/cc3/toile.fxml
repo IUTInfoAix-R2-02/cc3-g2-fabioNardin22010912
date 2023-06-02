@@ -13,6 +13,12 @@
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile" />
+        <Circle fx:id="c1" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
+        <Circle fx:id="c2" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
+        <Circle fx:id="c3" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
+        <Circle fx:id="c4" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
+        <Circle fx:id="c5" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
+        <Circle fx:id="c6" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
         <Group layoutX="195.0" layoutY="195.0">
             <Line endX="10.0" endY="5.0" startY="5.0" styleClass="croix" />
             <Line endX="5.0" endY="10.0" startX="5.0" styleClass="croix" />
@@ -55,8 +61,8 @@
          <Label text="Compétence 2 - Optimiser" GridPane.rowIndex="3" />
          <Label text="Compétence 3 - Administer" GridPane.rowIndex="4" />
          <Label text="Compétence 6 - Collaborer" GridPane.rowIndex="7" />
-         <Button mnemonicParsing="false" text="Vider" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="TOP" />
-         <Button mnemonicParsing="false" onAction="#Tracer" text="Tracer" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="TOP">
+         <Button mnemonicParsing="false" onAction="#vider" text="Vider" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="TOP" />
+         <Button mnemonicParsing="false" onAction="#tracer" text="Tracer" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="TOP">
             <GridPane.margin>
                <Insets right="10.0" />
             </GridPane.margin>
