@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
@@ -24,6 +25,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
 
 public class ToileController implements Initializable {
 
@@ -74,37 +76,76 @@ public class ToileController implements Initializable {
     Circle c6;
     @FXML
     TextField val1;
-    String v1;
+    int v1;
     @FXML
     TextField val2;
-    String v2;
+    int v2;
     @FXML
     TextField val3;
-    String v3;
+    int v3;
     @FXML
     TextField val4;
-    String v4;
+    int v4;
     @FXML
     TextField val5;
-    String v5;
+    int v5;
     @FXML
     TextField val6;
-    String v6;
+    int v6;
+    @FXML
+    Label error;
+
+    boolean p1 = false;
+    boolean p2 = false;
+    boolean p3 = false;
+    boolean p4 = false;
+    boolean p5 = false;
+    boolean p6 = false;
+
 
     @FXML
-    private void tracer(ActionEvent event){
-        v1=val1.getText();
-        v2=val2.getText();
-        v3=val3.getText();
-        v4=val4.getText();
-        v5=val5.getText();
-        v6=val6.getText();
-        if (v1 !=""){calcPosPoint(Integer.valueOf(v1),1,c1);}
-        if (v2 !=""){calcPosPoint(Integer.valueOf(v2),2,c2);}
-        if (v3 !="")calcPosPoint(Integer.valueOf(v3),3,c3);
-        if (v4 !="")calcPosPoint(Integer.valueOf(v4),4,c4);
-        if (v5 !="")calcPosPoint(Integer.valueOf(v5),5,c5);
-        if (v6 !="")calcPosPoint(Integer.valueOf(v6),6,c6);
+    private void placerPoints(ActionEvent event){
+        v1=Integer.valueOf(val1.getText());
+        v2=Integer.valueOf(val2.getText());
+        v3=Integer.valueOf(val3.getText());
+        v4=Integer.valueOf(val4.getText());
+        v5=Integer.valueOf(val5.getText());
+        v6=Integer.valueOf(val6.getText());
+        if (v1 > 0 && v1 <= 20){
+            calcPosPoint(Integer.valueOf(v1),1,c1);
+            p1 = true;
+        }
+        else error.setVisible(true);
+        if (v2 > 0 && v2 <= 20){
+            calcPosPoint(Integer.valueOf(v2),2,c2);
+            p2 = true;
+        }
+        else error.setVisible(true);
+        if (v3 > 0 && v3 <= 20) {
+            calcPosPoint(Integer.valueOf(v3), 3, c3);
+            p3 = true;
+        }
+        else error.setVisible(true);
+        if (v4 > 0 && v4 <= 20) {
+            calcPosPoint(Integer.valueOf(v4), 4, c4);
+            p4 = true;
+
+        }
+        else error.setVisible(true);
+        if (v5 > 0 && v5 <= 20){
+            calcPosPoint(Integer.valueOf(v5),5,c5);
+            p5 = true;
+        }
+        else error.setVisible(true);
+        if (v6 > 0 && v6 <= 20){
+            calcPosPoint(Integer.valueOf(v6),6,c6);
+            p6 = true;
+        }
+        else error.setVisible(true);
+
+    }
+    @FXML
+    private void tracer(ActionEvent e){
 
     }
     @FXML
@@ -117,6 +158,13 @@ public class ToileController implements Initializable {
         changePosPoint(originX,originY,c4);
         changePosPoint(originX,originY,c5);
         changePosPoint(originX,originY,c6);
+        p1 = false;
+        p2 = false;
+        p3 = false;
+        p4 = false;
+        p5 = false;
+        p6 = false;
+        error.setVisible(false);
 
     }
 }

@@ -13,12 +13,12 @@
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile" />
-        <Circle fx:id="c1" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
-        <Circle fx:id="c2" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
-        <Circle fx:id="c3" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
-        <Circle fx:id="c4" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
-        <Circle fx:id="c5" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
-        <Circle fx:id="c6" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile"/>
+        <Circle fx:id="c1" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile" />
+        <Circle fx:id="c2" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile" />
+        <Circle fx:id="c3" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile" />
+        <Circle fx:id="c4" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile" />
+        <Circle fx:id="c5" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile" />
+        <Circle fx:id="c6" centerX="200.0" centerY="200.0" radius="3.0" styleClass="toile" />
         <Group layoutX="195.0" layoutY="195.0">
             <Line endX="10.0" endY="5.0" startY="5.0" styleClass="croix" />
             <Line endX="5.0" endY="10.0" startX="5.0" styleClass="croix" />
@@ -67,12 +67,13 @@
                <Insets right="10.0" />
             </GridPane.margin>
          </Button>
-         <TextField fx:id="val1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-         <TextField fx:id="val2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-         <TextField fx:id="val3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-         <TextField fx:id="val4" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-         <TextField fx:id="val5" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-         <TextField fx:id="val6" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         <TextField fx:id="val1" onAction="#placerPoints" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <TextField fx:id="val2" onAction="#placerPoints" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <TextField fx:id="val3" onAction="#placerPoints" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <TextField fx:id="val4" onAction="#placerPoints" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         <TextField fx:id="val5" onAction="#placerPoints" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         <TextField fx:id="val6" onAction="#placerPoints" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         <Label fx:id="error" prefHeight="47.0" prefWidth="175.0" text="Erreur de saisie" textFill="RED" visible="false" GridPane.rowIndex="8" />
       </children>
    </GridPane>
 </HBox>
